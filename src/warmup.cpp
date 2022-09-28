@@ -1,8 +1,7 @@
 #include <random>
 #include <vector>
-#include "./../headers/warmup.hpp"
 
-void warmUpProcess() {
+void warmupProcess() {
 	const size_t quantity{ 1000000 };
 	std::vector<int> plainNumbers(quantity);
 	for (auto& number : plainNumbers) {

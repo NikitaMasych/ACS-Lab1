@@ -1,3 +1,3 @@
 #pragma once
 
-void warmUpProcess();
+void warmupProcess();

@@ -7,7 +7,7 @@ FILES = stats timer warmup
 OBJS = $(patsubst %, %.o, $(FILES))
 
 CXX=g++
-CXXFLAGS=-g -Wall
+CXXFLAGS=-O0 -g -Wall
 
 cmd:	$(SRC_DIR)main.cpp $(OBJS)
 		$(CXX) $(CXXFLAGS) $< $(wildcard $(addprefix $(OBJECTS_DIR),$(OBJS))) -o $@

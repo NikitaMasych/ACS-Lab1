@@ -7,25 +7,35 @@ Measures computational possibilities of the system.
 # Project structure:
 ```
 .
-├── cmd
-├── headers
-│   ├── stats.hpp
-│   ├── timer.hpp
-│   └── warmup.hpp
-├── makefile
-├── object
-│   ├── stats.o
-│   ├── timer.o
-│   └── warmup.o
-├── README.md
-├── src
-│   ├── main.cpp
-│   ├── stats.cpp
-│   ├── timer.cpp
-│   └── warmup.cpp
-└── templates
-    └── tests.ipp
+├── code
+│   ├── headers
+│   │   ├── stats.hpp
+│   │   ├── timer.hpp
+│   │   └── warmup.hpp
+│   ├── makefile
+│   ├── object
+│   │   ├── stats.o
+│   │   ├── timer.o
+│   │   └── warmup.o
+│   ├── src
+│   │   ├── main.cpp
+│   │   ├── stats.cpp
+│   │   ├── timer.cpp
+│   │   └── warmup.cpp
+│   └── templates
+│       └── tests.ipp
+├── Dockerfile
+├── docs
+│   └── ACS-Lab1-results.png
+└── README.md
 
+```
+# Docker and deployment:
+```
+$ docker build -t acs-lab1 . --network host
+$ docker run -v $(pwd)/code:/code -it acs-lab1
+bash# cd /code
+bash# make launch
 ```
 # Technology choice explanation:
 

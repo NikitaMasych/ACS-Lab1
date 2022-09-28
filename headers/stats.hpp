@@ -7,8 +7,8 @@ public:
 	Stats(const Stats&) = delete;
 	Stats(Stats&&) = delete;
 	Stats& operator=(const Stats&) = delete;
-	static void write(std::string, char, double);
+	static void write(const char*, char, double);
 	static void printDiagram();
 private:
-	static std::vector<std::tuple<std::string, char, double>> stats;
+	static std::vector<std::tuple<const char*, char, double>> stats;
 };

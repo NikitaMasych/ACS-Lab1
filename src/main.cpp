@@ -3,6 +3,11 @@
 #include "./../headers/warmup.hpp"
 #include "./../templates/tests.ipp"
 
+REGISTER_PARSE_TYPE(int);
+REGISTER_PARSE_TYPE(long long);
+REGISTER_PARSE_TYPE(float);
+REGISTER_PARSE_TYPE(double);
+
 int main(){
     warmUpProcess();
 

@@ -5,10 +5,10 @@
 #include <iomanip>
 #include <math.h>
 
-std::vector<std::tuple<std::string, char, double>> Stats::stats;
+std::vector<std::tuple<const char*, char, double>> Stats::stats;
 
-void Stats::write(std::string type, char operation, double duration) {
-	auto line = make_tuple(type, operation, duration);
+void Stats::write(const char* type, char operation, double duration) {
+	auto line = std::make_tuple(type, operation, duration);
 	stats.push_back(line);
 }
 

@@ -11,12 +11,14 @@ REGISTER_PARSE_TYPE(double)
 
 int main(){
     warmupProcess();
+    
+    launchMultipleTests<int>();
+    launchMultipleTests<long long>();
+    launchMultipleTests<float>();
+    launchMultipleTests<double>();
 
-    launchTests<int>();
-    launchTests<long long>();
-    launchTests<float>();
-    launchTests<double>();
-
+    Stats::calculateAverage();
     Stats::printDiagram();
+
     return 0;
 }

@@ -1,6 +1,7 @@
+#include "./../headers/timer.hpp"
+
 #include <chrono>
 #include <iostream>
-#include "./../headers/timer.hpp"
 
 using namespace std::literals::chrono_literals;
 
@@ -9,12 +10,12 @@ Timer::Timer() {
 }
 
 long long Timer::timePassed() {
-	end = std::chrono::system_clock::now();
+	auto end = std::chrono::system_clock::now();
 	return  std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 };
 
 long long Timer::measureEmptyBodyCycleDuration(const size_t& iterations) {
 	Timer timer;
-	for (int i = 0; i != iterations; ++i) {}
+	for (size_t i = 0; i != iterations; ++i) {}
 	return timer.timePassed();
 }

@@ -3,6 +3,7 @@
 SRC_DIR=./src/
 HEADERS_DIR=./headers/
 OBJECTS_DIR=./object/
+ASM_DIR= ./assembly/
 
 # Files:
 
@@ -12,7 +13,7 @@ OBJS = $(patsubst %, %.o, $(FILES))
 # Compiler:
 
 CXX=g++
-CXXFLAGS=-O0 -g -Wall
+CXXFLAGS=-g -Wall
 
 # Commands:
 

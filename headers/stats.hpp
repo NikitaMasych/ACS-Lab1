@@ -1,4 +1,5 @@
 #pragma once
+
 #include <vector>
 #include <string>
 
@@ -7,8 +8,11 @@ public:
 	Stats(const Stats&) = delete;
 	Stats(Stats&&) = delete;
 	Stats& operator=(const Stats&) = delete;
-	static void write(const char*, char, double);
+	static void write(std::string&&, char, double);
 	static void printDiagram();
+	static void calculateAverage();
+	static double retrieveFastestPerformance();
+	static size_t test_amount;
 private:
-	static std::vector<std::tuple<const char*, char, double>> stats;
+	static std::vector<std::tuple<std::string, char, double>> stats;
 };

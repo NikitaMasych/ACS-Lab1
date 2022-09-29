@@ -13,7 +13,7 @@ OBJS = $(patsubst %, %.o, $(FILES))
 # Compiler:
 
 CXX=g++
-CXXFLAGS=-g -Wall
+CXXFLAGS=-O0 #-g -Wall
 
 # Commands:
 

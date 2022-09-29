@@ -4,10 +4,12 @@
 
 #include "./../templates/tests.ipp"
 
-REGISTER_PARSE_TYPE(int)
-REGISTER_PARSE_TYPE(long long)
-REGISTER_PARSE_TYPE(float)
-REGISTER_PARSE_TYPE(double)
+// Type and genesis value:
+
+REGISTER_PARSE_TYPE(int, 2345)
+REGISTER_PARSE_TYPE(long long, 832943)
+REGISTER_PARSE_TYPE(float, 42431.293)
+REGISTER_PARSE_TYPE(double, 293843.32423)
 
 int main(){
     warmupProcess();

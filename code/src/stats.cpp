@@ -7,7 +7,7 @@
 #include <cmath>
 
 
-size_t Stats::test_amount{5};
+size_t Stats::test_amount{1};
 std::vector<std::tuple<std::string, char, double>> Stats::stats;
 
 enum{

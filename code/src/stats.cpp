@@ -7,8 +7,7 @@
 #include <cmath>
 
 
-size_t Stats::test_amount{1};
-std::vector<std::tuple<std::string, char, double>> Stats::stats;
+std::vector<std::tuple<std::string, std::string, double>> Stats::stats;
 
 enum{
 	typeID,
@@ -16,7 +15,7 @@ enum{
 	performanceID,
 };
 
-void Stats::write(std::string&& type, char operation, double performance) {
+void Stats::write(std::string&& type, std::string&& operation, double performance) {
 	stats.emplace_back(std::make_tuple(type, operation, performance));
 }
 
@@ -99,10 +98,10 @@ void Stats::calculateAverage(){
 			offset += 4;
 		}
 
-		average_stats.emplace_back(std::make_tuple(type_sample, '+', average_add_speed));
-		average_stats.emplace_back(std::make_tuple(type_sample, '-', average_sub_speed));
-		average_stats.emplace_back(std::make_tuple(type_sample, '*', average_mul_speed));
-		average_stats.emplace_back(std::make_tuple(type_sample, '/', average_div_speed));
+		average_stats.emplace_back(std::make_tuple(type_sample, "+", average_add_speed));
+		average_stats.emplace_back(std::make_tuple(type_sample, "-", average_sub_speed));
+		average_stats.emplace_back(std::make_tuple(type_sample, "*", average_mul_speed));
+		average_stats.emplace_back(std::make_tuple(type_sample, "/", average_div_speed));
 	}
 	
 	Stats::stats = average_stats;

@@ -60,7 +60,7 @@ As far as C++ is a great fit for writing embedded-based application is had been 
 After launched and done required measurements, in console window appears statistics table. 
 First column contains operation, next variable type, operations/sec for specified type and operation, then relative linear diagram with respect to the maximum value of op/sec and percetage rate accordingly.
 
-![http://url/to/img.png](https://github.com/NikitaMasych/ACS-Lab1/blob/main/docs/ACS-Lab1-results.png)
+![http://url/to/img.png](https://github.com/NikitaMasych/ACS-Lab1/blob/main/docs/Results.png)
 
 
 # Diagnostic results:

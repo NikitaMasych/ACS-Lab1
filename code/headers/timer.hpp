@@ -10,22 +10,20 @@ public:
 	long long timePassed();
 	template<typename T>
 	static long long measureCycleWithAssignment(const size_t& iterations){
-		T a0{ std::numeric_limits<T>::max() };
-		T a1{ std::numeric_limits<T>::max() / 3};
-		T a2, a3, a4, a5, a6, a7, a8, a9;
-		
+		T value{ std::numeric_limits<T>::max() };
+		T a0, a1, a2, a3, a4, a5, a6, a7, a8, a9;
 		Timer timer;
 		for (size_t i = 0; i != iterations; ++i) {
-			a3 = a1;
-			a1 = a0;
-			a2 = a3;
-			a4 = a1;
-			a5 = a2;
-			a6 = a4;
-			a7 = a1;
-			a8 = a6;
-			a0 = a7;
-			a9 = a0;
+			a0 = value;
+			a1 = value;
+			a2 = value;
+			a3 = value;
+			a4 = value;
+			a5 = value;
+			a6 = value;
+			a7 = value;
+			a8 = value;
+			a9 = value;
 		}
 		return timer.timePassed();
 	}

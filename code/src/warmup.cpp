@@ -2,7 +2,7 @@
 #include <vector>
 
 void warmupProcess() {
-	const size_t quantity{ 10000000 };
+	const size_t quantity{ 100000000 };
 	std::vector<int> plain_numbers(quantity);
 	for (auto& number : plain_numbers) {
 		number = rand();

@@ -1,3 +1,5 @@
 cmd*
 object/
 .vscode/
+main.cpp
+!src/
